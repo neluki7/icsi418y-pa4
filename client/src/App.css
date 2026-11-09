@@ -1,0 +1,762 @@
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("./assets/background2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Main title */
+.app h1 {
+  margin: 0;
+  font-size: 42px;
+  color: #fff;
+}
+
+/* Text underneath Welcome */
+.subtitle {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.auth-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.auth-page .subtitle {
+  margin: 0 0 12px;
+}
+
+.auth-switch {
+  margin: 18px 0 0;
+  text-align: center;
+}
+
+
+/* The two boxes */
+.forms {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Individual Sign Up / Login boxes */
+.form-container {
+  width: 350px;
+  max-width: 100%;
+  padding: 30px;
+  background: white;
+  border: 1px solid #dddddd;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(244, 240, 240, 0.441);
+  box-sizing: border-box;
+}
+
+/* Sign Up / Login heading */
+.form-container h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #222;
+}
+
+/* Form layout */
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Labels */
+.form-container label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Text boxes */
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #7b5353;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* When you click inside an input */
+.form-container input:focus {
+  outline: none;
+  border-color: #48636c5c;
+  box-shadow: 0 0 0 2px rgba(177, 206, 204, 0.15);
+}
+
+/* Buttons */
+.form-container button {
+  margin-top: 10px;
+  padding: 11px;
+  border: none;
+  border-radius: 6px;
+  background: rgb(65, 79, 124);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Button when mouse is over it */
+.form-container button:hover {
+  background:rgb(34, 48, 67);
+}
+
+/* Make the cards stack on smaller screens */
+@media (max-width: 750px) {
+  .forms {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/*Projects*/
+
+.projects-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 30px auto 0;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.projects-section h2 {
+  margin-top: 0;
+  color: #222;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.project-card {
+  padding: 14px 16px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #414f7c;
+  font-size: 17px;
+}
+
+.project-card p {
+    margin: 6px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.error-message {
+  color: #b00020;
+}
+
+
+/*Create Project*/
+
+.create-project-section {
+  max-width: 600px;
+  margin: 35px auto 0;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.create-project-section h2 {
+  margin-top: 0;
+  color: #222;
+}
+
+.create-project-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.create-project-section label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  color: #333;
+}
+
+.create-project-section input,
+.create-project-section textarea,
+.create-project-section select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #7b5353;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.create-project-section textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.create-project-section button {
+  padding: 11px;
+  border: none;
+  border-radius: 6px;
+  background: rgb(65, 79, 124);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.text-button {
+  border: none;
+  background: transparent;
+  color: #71618f;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.text-button:hover {
+  color: #967ae3;
+  text-decoration: underline;
+}
+
+.success-message {
+  color: #39734b;
+  font-size: 14px;
+}
+
+
+/* Soft pastel textbox backgrounds */
+.projects-section,
+.create-project-section,
+.membership-section {
+  background: rgba(255, 250, 255, 0.94);
+  border: 1px solid #e8dff0;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(115, 91, 135, 0.12);
+}
+
+
+/* Pastel project cards */
+.project-card {
+  background: #f8f3fc;
+  border-color: #e7d9f0;
+}
+
+/* Softer headings on project pages */
+.projects-section h2,
+.create-project-section h2,
+.membership-section h2,
+.membership-section h3,
+.project-card h3 {
+  color: #79658f;
+}
+
+/* Pastel inputs, without changing their size or layout */
+.create-project-section input,
+.create-project-section textarea,
+.create-project-section select,
+.membership-section select {
+  border-color: #d8c9e5;
+}
+
+/* Pastel buttons on project pages only */
+.create-project-section button,
+.membership-section button,
+.secondary-button {
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  min-height: 42px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 30px;
+  background: #9582b8;
+  color: white;
+}
+
+.create-project-section button:hover,
+.membership-section button:hover,
+.secondary-button:hover {
+  background: #79658f;
+}
+
+
+/* Adjust project columns for smaller screens */
+@media (max-width: 900px) {
+  .projects-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Organized project member list */
+.member-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin: 20px auto 28px;
+  box-sizing: border-box;
+}
+
+/* Individual member row */
+.member-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 72px;
+  padding: 12px 18px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #e7d9f0;
+  border-radius: 12px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* Member name and avatar */
+.member-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.member-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e8def5;
+  color: #79658f;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.member-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.member-name {
+  color: #3f354a;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.member-username {
+  color: #83778e;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+/* Member actions */
+.member-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  flex-shrink: 0;
+}
+
+.lead-badge {
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #e8def5;
+  color: #79658f;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Remove Member button */
+.member-actions .remove-member-button {
+  padding: 6px 10px;
+  border: 1px solid #e7c9d2;
+  border-radius: 20px;
+  background: #fff0f3;
+  color: #a34f68;
+  font-size: 12px;
+  font-weight: 600;
+  min-height: 0;
+  margin-top: 0;
+  cursor: pointer;
+}
+
+.membership-section .remove-member-button:hover {
+  background: #f9dfe7;
+  color: #a34f68;
+  border-color: #e7c9d2;
+}
+
+/* Empty member list */
+.empty-members {
+  padding: 18px;
+  border: 1px dashed #d8c9e5;
+  border-radius: 10px;
+  color: #83778e;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Keep member rows readable on phones */
+@media (max-width: 500px) {
+  .member-row {
+    align-items: flex-start;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .member-info {
+    gap: 8px;
+  }
+
+  .member-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .lead-badge {
+    font-size: 11px;
+    padding: 5px 7px;
+  }
+
+  .remove-member-button {
+    padding: 6px 8px;
+  }
+}
+
+
+/*Project Backlog*/
+.backlog-section {
+  width: 100%;
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 25px;
+  box-sizing: border-box;
+
+  background: rgba(255, 250, 255, 0.96);
+  border: 1px solid #e8dff0;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(115, 91, 135, 0.12);
+
+  color: #3f354a;
+  text-align: left;
+}
+
+.backlog-section h2,
+.backlog-section h3 {
+  color: #79658f;
+}
+
+.backlog-section label {
+  color: #3f354a;
+  font-weight: 500;
+}
+
+.backlog-section input,
+.backlog-section textarea,
+.backlog-section select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d8c9e5;
+  border-radius: 6px;
+  background: white;
+  color: #333;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.backlog-section textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* Create Story form layout */
+.backlog-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Edit User Story form layout */
+.edit-story {
+  margin-top: 25px;
+}
+
+.edit-story h4 {
+  margin-bottom: 22px;
+}
+
+.edit-story > div {
+  margin-bottom: 20px;
+}
+
+.edit-story label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Edit Story buttons */
+.edit-story > button {
+  margin-top: 5px;
+}
+
+.edit-story > button + button {
+  margin-left: 16px;
+}
+
+.backlog-section form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.backlog-section form button[type="submit"] {
+  align-self: center;
+  margin-top: 5px;
+}
+
+.backlog-section button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #9582b8;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.backlog-section button:hover {
+  background: #79658f;
+}
+
+@media (max-width: 600px) {
+  .backlog-section {
+    padding: 16px;
+    margin-bottom: 0;
+  }
+}
+
+
+/* Individual user story cards */
+.stories-heading {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #79658f;
+  font-size: 24px;
+  text-align: left;
+}
+
+.story-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #e7d9f0;
+  border-radius: 12px;
+  padding: 22px;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.story-card h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.story-card p {
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+
+/* Compact story details and buttons */
+.story-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.story-badges,
+.story-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.story-actions {
+  margin-top: 0;
+}
+
+.story-actions button {
+  min-width: 80px;
+}
+
+/* Priority, status, and member badges */
+.priority-badge,
+.status-badge,
+.assignee-badge {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Priority colors */
+.priority-high {
+  background: #f9dfe7;
+  color: #a34f68;
+}
+
+.priority-medium {
+  background: #fff0c2;
+  color: #886513;
+}
+
+.priority-low {
+  background: #e2f3e7;
+  color: #39734b;
+}
+
+/* Status colors */
+.status-to-do {
+  background: #eee7f7;
+  color: #79658f;
+}
+
+.status-in-progress {
+  background: #fff0c2;
+  color: #886513;
+}
+
+.status-done {
+  background: #e2f3e7;
+  color: #39734b;
+}
+
+/* Assigned member badge */
+.assignee-badge {
+  background: #eeedf1;
+  color: #514a5b;
+}
+
+
+
+.secondary-button + .secondary-button {
+  margin-left: 15px;
+}
+
+.backlog-section + .secondary-button,
+.membership-section + .secondary-button {
+  margin-top: 0;
+}
+
+/* Project Membership error message */
+.membership-section .error-message {
+  background: #fff0f3;
+  color: #a34f68;
+  border: 1px solid #e7c9d2;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin: 15px 20px 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Project Membership dropdowns */
+.membership-section select {
+  display: block;
+  width: calc(100% - 40px);
+  margin: 8px auto 20px;
+  padding: 10px;
+  border: 1px solid #d8c9e5;
+  border-radius: 6px;
+  background: white;
+  color: #333;
+  font-size: 16px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.membership-section {
+  width: 100%;
+  max-width: 700px;
+  padding: 30px;
+  box-sizing: border-box;
+  margin: 25px auto;
+}
+
+
+/* Successful project membership actions */
+.membership-section .membership-success {
+  background: #eaf7ee;
+  color: #39734b;
+  border: 1px solid #b9dfc4;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin: 15px 20px 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+}
