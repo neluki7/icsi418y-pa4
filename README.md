@@ -52,7 +52,7 @@ Configure the required MongoDB connection in `server/.env` before starting the b
 ## Project Structure
 
 ```text
-icsi418y-pa3/
+icsi418y-pa4/
 ├── client/
 │   ├── public/
 │   ├── src/
